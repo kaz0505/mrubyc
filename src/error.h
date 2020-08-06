@@ -21,9 +21,8 @@
 extern "C" {
 #endif
 
-
 void mrbc_init_class_exception(struct VM *vm);
-
+void c_mrbc_raise(mrbc_vm *vm, mrbc_error_code err, char *msg);
 
 #ifdef __cplusplus
 }

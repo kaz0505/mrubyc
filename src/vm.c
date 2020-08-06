@@ -25,6 +25,7 @@
 #include "class.h"
 #include "symbol.h"
 #include "console.h"
+#include "error.h"
 
 #include "c_object.h"
 #include "c_string.h"
@@ -1750,7 +1751,13 @@ static inline int op_div( mrbc_vm *vm, mrbc_value *regs )
 
   if( regs[a].tt == MRBC_TT_FIXNUM ) {
     if( regs[a+1].tt == MRBC_TT_FIXNUM ) {     // in case of Fixnum, Fixnum
-      regs[a].i /= regs[a+1].i;
+      if( regs[a+1].i == 0 ){
+	// TODO: This raise code is work in progress
+	// MUST change appropriate function, NOT E_RUNTIME_ERROR
+	c_mrbc_raise(vm, E_RUNTIME_ERROR, NULL);
+      } else {
+	regs[a].i /= regs[a+1].i;
+      }
       return 0;
     }
 #if MRBC_USE_FLOAT

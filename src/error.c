@@ -32,6 +32,13 @@ static void c_exception_message(struct VM *vm, mrbc_value v[], int argc)
 }
 
 
+void c_mrbc_raise(mrbc_vm *vm, mrbc_error_code err, char *msg)
+{
+  vm->exc = mrbc_class_runtimeerror;
+  vm->exc_message = mrbc_nil_value();
+}
+
+
 void mrbc_init_class_exception(struct VM *vm)
 {
   mrbc_class_exception = mrbc_define_class(vm, "Exception", mrbc_class_object);
