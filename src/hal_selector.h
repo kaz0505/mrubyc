@@ -30,6 +30,9 @@
 #elif defined(MRBC_USE_HAL_RP2040)
 #include "hal_rp2040/hal.h"
 
+#elif defined(MRBC_USE_HAL_STM32)
+#include "hal_stm32/hal.h"
+
 #else
 #include "hal.h"
 #endif
