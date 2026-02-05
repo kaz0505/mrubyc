@@ -1,0 +1,11 @@
+# sample library configuration file
+
+name: sample-library
+description: This is a sample configuration file for the sample library.
+version: 1.0.0
+
+ruby-files: [sample1.rb, sample2.rb]
+
+c-files: c_sample.c
+c-init-function: c_sample_init
+
