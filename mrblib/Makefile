@@ -9,7 +9,7 @@
 
 TARGET = ../src/mrblib.c
 VERSIONFILE =  ../src/VERSION
-SRC = enum.rb array.rb global.rb hash.rb numeric.rb object.rb range.rb string.rb
+SRC = enum.rb array.rb global.rb hash.rb numeric.rb object.rb range.rb string.rb extension.rb
 MRBC ?= mrbc
 
 
