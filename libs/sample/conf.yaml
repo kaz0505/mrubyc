@@ -4,8 +4,8 @@ name: sample-library
 description: This is a sample configuration file for the sample library.
 version: 1.0.0
 
-ruby-files: [sample1.rb, sample2.rb]
+ruby_files: [sample1.rb, sample2.rb]
 
-c-files: c_sample.c
-c-init-function: c_sample_init
+c_files: c_sample.c
+c_init_function: c_sample_init
 
