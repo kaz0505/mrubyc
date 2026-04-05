@@ -1,0 +1,5 @@
+name: class-set
+description: Set class for managing unique collections using Hash
+version: 1.0.0
+
+ruby_files: [set.rb]
